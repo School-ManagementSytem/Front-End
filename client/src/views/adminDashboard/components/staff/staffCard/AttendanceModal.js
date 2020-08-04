@@ -8,6 +8,12 @@ import '../../students/studentCard/studentTable.scss'
 
 const AttendanceModal = props => {
 
+    
+    const [attendance, setAttendance] = useState({
+        meeting: {},
+        students: []
+    })
+    
     useEffect(() => {
         props.getStudentsByCourseID(props.staffID)
         const studentsNew = props.studentList.map(each => {
@@ -16,13 +22,8 @@ const AttendanceModal = props => {
         })
         setAttendance({...attendance, 
             students:studentsNew})
-    },[])
-
-    const [attendance, setAttendance] = useState({
-        meeting: {},
-        students: []
-    })
-
+    },[props, attendance])
+    
     const attendanceColumns = [
         {
             title: 'Student ID',
@@ -32,7 +33,6 @@ const AttendanceModal = props => {
         {
             title: 'Name',
             dataIndex: 'first_name',
-            dataIndex: 'additional_names',
             key: 2,
         },
 

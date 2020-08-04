@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Grid, Segment, Icon } from 'semantic-ui-react'
 import { connect } from 'react-redux';
 import { getStaffById, toggleStaffEditComponent } from '../../../../../actions';
 import { withRouter } from 'react-router-dom';
 import StaffForm from './StaffForm';
-import { Spin, Table } from 'antd';
+import { Spin} from 'antd';
 
 
 const StaffInformationTab = props => {
     useEffect(() => {
         props.getStaffById(props.staffID)
-    }, [])
+    }, [props])
 
     let options = { year: 'numeric', month: 'numeric', day: 'numeric' }; //'long'
     let birthdate = new Date(props.staffById.birthdate).toLocaleDateString('en-GB', options)

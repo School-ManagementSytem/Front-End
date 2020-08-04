@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const TabWrap = styled.div`
@@ -13,22 +13,17 @@ const TabWrap = styled.div`
 `
 
 function Tab({ tab, navigation, setNavigation, tabColor, setTabColor, selected, setSelected }) {
-  // const [color, setColor] = useState('transperant');
-  // const [selected, setSelected] = useState(table);
-  // useEffect(() => {
-
-  // }, [selected])
-
+ 
   const handleClick = (tab) => {
     setSelected(tab.toLowerCase())
     setNavigation(tab.toLowerCase())
   }
   return (
-    <a style={{cursor: "pointer"}} onClick={() => handleClick(tab.key)}>
+    <div style={{cursor: "pointer"}} onClick={() => handleClick(tab.key)}>
     <TabWrap style={{backgroundColor: `${tab.key.toLowerCase() === selected ? "#DD3B58" : "transparent"}`}}>
       {tab.key}
     </TabWrap>
-    </a>
+    </div>
   )
 }
 

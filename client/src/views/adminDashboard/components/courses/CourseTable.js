@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { getCourseTable} from '../../../../actions';
 import { Table, Spin } from 'antd';
 import 'antd/dist/antd.css';
@@ -16,7 +16,7 @@ const CourseTable = props => {
 
   useEffect(() => {
     props.getCourseTable();
-  }, [])
+  }, [props])
 
   const handleCancelButtonOnForm = () => {
     setForm(false);

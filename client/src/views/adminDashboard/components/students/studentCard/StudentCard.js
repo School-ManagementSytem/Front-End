@@ -1,8 +1,8 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getStudentById, toggleEditComponent } from '../../../../../actions';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import StudentInformationTab from './StudentInformationTab';
 import StudentCoursesTab from './StudentCoursesTab';
 import Billing from './billing/Billing'
@@ -17,7 +17,7 @@ import '../../mainStyle/mainCard.scss'
 const StudentCard = props => {
     useEffect(() => {
         props.getStudentById(props.studentID)
-    }, [])
+    }, [props])
 
     const studentPanes = [
         {

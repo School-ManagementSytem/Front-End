@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
 function NavBar(props) {
   const [selected, setSelected] = useState(false);
 
-  useEffect(() => {
-    console.log('NAVBAR HEREEE: ', props)
+  useEffect(()=> {
+    console.log('NAVBAR HEREEE: ', props.location)
     if (props.location.pathname === "/about-us") {
       setSelected('about');
     }
@@ -29,16 +29,12 @@ function NavBar(props) {
     if (props.location.pathname === "/register") {
       setSelected(false);
     }
-  }, [selected, props.toggle])
+  }, [props.location])
 
   const handleLogo = () => {
-    props.history.push('/')
     setSelected(false);
   }
 
-  const signIn = () => {
-    // props.history.push('/login');
-  }
 
   const handleCourse = () => {
     //handle reset when the 'course' is clicked while inner tab is selected
@@ -61,16 +57,10 @@ function NavBar(props) {
     setSelected('contact');
   }
 
-  const handleSignIn = () => {
-    setSelected('signin');
-  }
-
-  const signInText = props.loggedIn ? 'Dashboard' : 'Sign In'
-
   return (
     <div className="nav">
       <div className="navbar-left">
-        <a onClick={handleLogo} className="logo"><img className="logo-image" src={Logo}></img></a>
+        <Link onClick={handleLogo} to="/" className="logo"><img className="logo-image" src={Logo} alt="logo"></img></Link>
       </div>
       <div className="navbar-right">
         <Link to='/course-structure' onClick={handleCourse} style={{borderBottom: `${selected === 'course' && selected !== 'signin' ? '2px solid #C73642' : '2px solid transparent'}`}}>Course Structure</Link>

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux';
 import { Grid, Segment, Input, Icon } from 'semantic-ui-react';
 import { toggleEditProgressComponent, editStudentProgress, getStudentProgress } from '../../../../../actions';
-import { Table, Spin } from 'antd';
+import { Spin } from 'antd';
 
 
 

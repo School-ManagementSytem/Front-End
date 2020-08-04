@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Redirect, Link } from "react-router-dom";
 import { withRouter } from "react-router";
 import { connect } from "react-redux";
@@ -18,10 +18,6 @@ function Login(props) {
   const [modal, setModal] = useState(false);
 
   const [email, setEmail] = useState("");
-
-  useEffect(() => {
-    console.log("LOGIN props: ", props);
-  }, []);
 
   const handleChange = e => {
     setUser({
@@ -64,7 +60,7 @@ function Login(props) {
         {/* <NavBar /> */}
         <div className="login-body">
           <div className="img-container">
-            <img src={LoginGroup} />
+            <img alt="speakout" src={LoginGroup} />
           </div>
           <div className="form-container">
             <h1>Welcome back!</h1>

@@ -30,7 +30,6 @@ import {
         isEditing: false,
         isEdited: false,
         isPosting: false,
-        isPosting: false,
         searchTerm:""
   }
   
@@ -130,7 +129,6 @@ import {
                     isLoading: false,
                     error: null,
                     isPosting: false,
-                    isPosting: true,
                     parentById: action.payload
                 };
             case ADD_PARENT_FAILURE:

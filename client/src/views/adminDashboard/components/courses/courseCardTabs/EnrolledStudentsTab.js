@@ -11,17 +11,13 @@ import 'antd/dist/antd.css';
 import '../../mainStyle/mainCard.scss'
 
 const EnrolledStudentsTab = props => {
-  const [search, setSearch] = useState('');
+  const [search] = useState('');
   const [form, setForm] = useState(false);
 
 
   useEffect(() => {
     props.getStudentTableByCourseID(props.courseId);
-  }, [])
-
-  const handleCancelButtonOnForm = () => {
-    setForm(false);
-  }
+  }, [props])
 
   const handleSearchInput = () => {
     

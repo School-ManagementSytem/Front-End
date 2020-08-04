@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import { familyRegister } from "../actions/registrationActions";
 import Dropdown from "react-dropdown";
 import "./register.scss";
-import { callbackify } from "util";
 import { toggle } from "../actions/landingPageActions/landingPageActions";
 
 
@@ -25,7 +24,7 @@ function Register(props) {
   const [errorBorderFatherName, setErrorBorderFatherName] = useState('#595759'); //error #C73642
   const [errorBorderMotherName, setErrorBorderMotherName] = useState('#595759'); //error #C73642
   const [errorBorderPrimaryTelephone, setErrorBorderPrimaryTelephone] = useState('#595759'); //error #C73642
-  const [errorBorderSecondaryTelephone, setErrorBorderSecondaryTelephone] = useState('#595759'); //error #C73642
+  const [errorBorderSecondaryTelephone] = useState('#595759'); //error #C73642
 
   const [errorBorderFirstName, setErrorBorderFirstName] = useState('#595759'); //error #C73642
   const [errorBorderAdditionalNames, setErrorBorderAdditionalNames] = useState('#595759'); //error #C73642
@@ -36,7 +35,7 @@ function Register(props) {
   
   useEffect(() => {
     props.toggle();
-  }, [props.success])
+  }, [props])
 
   const [user, setUser] = useState({
     username: "",
@@ -89,10 +88,6 @@ function Register(props) {
     setConfirmPassword(e.target.value);
   };
 
-  const nextStep = e => {
-    e.preventDefault();
-    setStep(step + 1);
-  };
 
   const nextStepStudentInfoBtn = e => {
     e.preventDefault();
@@ -175,7 +170,7 @@ function Register(props) {
     });
   };
 
-  {if (!props.success) {
+  if (!props.success) {
 
   return (
     <div className="parent-reg">
@@ -512,7 +507,7 @@ function Register(props) {
       <Link to="/login" className="button">Sign In</Link>
     </div>
   )
-}}
+}
 }
 
 const mapStateToProps = state => {

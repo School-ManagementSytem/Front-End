@@ -11,14 +11,11 @@ function NavBar(props) {
     props.logOut(props.history);
   }
 
-  const pushToHome = () => {
-    props.history.push('/');
-  }
 
   return (
     <div className="nav">
       <div className="navbar-left">
-        <a onClick={pushToHome} className="logo"><img className="logo-image" src={Logo}></img></a>
+        <a href="/"className="logo"><img className="logo-image" src={Logo} alt="logo"></img></a>
       </div>
       <div className="navbar-right">
         <button 

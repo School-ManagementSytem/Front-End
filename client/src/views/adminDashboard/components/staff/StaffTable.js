@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import { connect } from 'react-redux';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { getStaffTable } from '../../../../actions';
 import { Table, Spin } from 'antd';
 import 'antd/dist/antd.css';
@@ -15,7 +15,7 @@ const StaffTable = props => {
   const [form, setForm] = useState(false);
     useEffect(() => {
         props.getStaffTable();
-    }, [])
+    }, [props])
 
     const handleCancelButtonOnForm = () => {
       setForm(false);

@@ -1,38 +1,17 @@
-import React, {useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { getParentTable } from '../../../../actions';
 import SearchParentTable from './SearchParentTable';
 import { Table, Spin } from 'antd';
 import 'antd/dist/antd.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
-import ParentRegistrationForm from './ParentRegistrationForm';
 
 
 function ParentList(props) {
- 
-  const [search, setSearch] = useState('');
-  const [form, setForm] = useState(false);
-
 
   useEffect(() => {
     props.getParentTable();
-  }, [])
-
-
-  const handleCancelButtonOnForm = () => {
-    setForm(false);
-  }
-
-  const handleSearchInput = () => {
-
-  }
-
-  const handleAddButton = () => {
-    setForm(!form);
-  }
-
+  }, [props])
 
   const parentListColumns = [
     {

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { withRouter } from "react-router";
-import { Link } from "react-router-dom";
 import "./contactUs.scss";
 import WhatsApp from "../../../../assets/whatsapp.png";
 import ContactEmail from "../../../../assets/ContactEmail.png";
@@ -17,7 +16,7 @@ function ContactUs(props) {
   useEffect(() => {
     props.toggle();
 
-  }, [])
+  }, [props])
   return (
     <div className="about-us">
       <header>
@@ -37,36 +36,36 @@ function ContactUs(props) {
       <div className="body">
         <div className="body-left">
           <div className="contact-container">
-            <img src={WhatsApp} />
+            <img alt="speakout" src={WhatsApp} />
             <p>+973 35617635</p>
           </div>
           <div className="contact-container">
-            <img src={ContactEmail} />
+            <img alt="speakout" src={ContactEmail} />
             <p>speakout.info.bh@gmail.com</p>
           </div>
           <div className="contact-container">
-            <img src={PinLarge} />
+            <img alt="speakout" src={PinLarge} />
             <p>
               Rd No 3949 <br />
               Bani Jamra, Bahrain
             </p>
           </div>
           <div className="img-container">
-            <img src={Map} />
+            <img alt="speakout" src={Map} />
           </div>
         </div>
         <div className="body-right">
           <h2>Social Media</h2>
           <div className="contact-container">
-            <img src={Instagram} />
+            <img alt="speakout" src={Instagram} />
             <p>speak_out_program</p>
           </div>
           <div className="contact-container">
-            <img src={Facebook} />
+            <img alt="speakout" src={Facebook} />
             <p>speakoutinfobh</p>
           </div>
           <div className="contact-container">
-            <img src={Twitter} />
+            <img alt="speakout" src={Twitter} />
             <p>speakoutbh</p>
           </div>
         </div>

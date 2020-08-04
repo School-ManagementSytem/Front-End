@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { editStaffById, toggleStaffEditComponent } from '../../../../../actions';
-import { withRouter, Link } from 'react-router-dom';
-import { Grid, Segment, Input, Icon, Form } from 'semantic-ui-react';
+import { withRouter } from 'react-router-dom';
+import { Grid, Segment, Input, Icon } from 'semantic-ui-react';
 
 
 const StaffForm = props => {
@@ -13,8 +13,6 @@ const StaffForm = props => {
         name: props.staffById.name,
         short_name: props.staffById.short_name,
         cpr: props.staffById.cpr,
-        mobile_number: props.staffById.mobile_number,
-        gender: props.staffById.gender,
         accent: props.staffById.accent,
         gender: props.staffById.gender,
         mobile_number: props.staffById.mobile_number,

@@ -1,8 +1,8 @@
 import React, { useState} from 'react';
 import { connect } from 'react-redux'
-import { Grid, Segment, Input, Icon, Form } from 'semantic-ui-react'
+import { Grid, Segment, Input, Icon } from 'semantic-ui-react'
 import { addStaff, toggleAddStaffComponent } from '../../../../actions';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 
 
@@ -15,7 +15,6 @@ console.log ( 'staff registry props', props)
     name: '',
     short_name: '',
     cpr: '',
-    mobile_number: '',
     gender: '',
     accent: '',
     birthdate: '',

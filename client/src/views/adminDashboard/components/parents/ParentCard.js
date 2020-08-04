@@ -1,11 +1,10 @@
-import React, {useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { getParentById } from '../../../../actions';
 import ParentInfomation from './ParentInfomation'
 import StudentInfo from './StudentInfo';
 import { Tab, Header, Image, Icon } from 'semantic-ui-react';
-import { Spin } from 'antd';
 import '../mainStyle/mainCard.scss'
 import 'antd/dist/antd.css';
 
@@ -13,7 +12,7 @@ import 'antd/dist/antd.css';
 const ParentCard = props => {
     useEffect(() => {
         props.getParentById(props.parentId);
-    },[])
+    },[props])
 
     const panes = [
       {

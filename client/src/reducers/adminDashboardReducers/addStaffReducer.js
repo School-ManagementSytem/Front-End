@@ -28,7 +28,6 @@ export const addStaffReducer = (state = initialState, action) => {
                     isLoading: false,
                     error: null,
                     isPosting: false,
-                    isPosting: true,
                     staffById: action.payload
                 };
             case ADD_STAFF_FAILURE:

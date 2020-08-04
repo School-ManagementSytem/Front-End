@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../../../../assets/Logo.png';
 import './navbar.scss';
-import { withRouter } from "react-router";
+import { withRouter, Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import { logOut } from '../../../../actions/authenticationActions';
 
@@ -11,14 +11,10 @@ function NavBar(props) {
     props.logOut(props.history);
   }
 
-  const pushToHome = () => {
-    props.history.push('/');
-  }
-
   return (
     <div className="nav">
       <div className="navbar-left">
-        <a onClick={pushToHome} className="logo"><img className="logo-image" src={Logo}></img></a>
+        <Link to="/" className="logo"><img className="logo-image" src={Logo} alt="logo"></img></Link>
       </div>
       <div className="navbar-right">
         <button 

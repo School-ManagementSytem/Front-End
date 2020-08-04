@@ -13,25 +13,17 @@ const Footer = () => {
     <footer>
       <div className="contacts">
         <div className="icons">
-          <a href="#">
-            <img src={Instagram} />
-          </a>
-          <a href="#">
-            <img src={Facebook} />
-          </a>
-          <a href="#">
-            <img src={Twitter} />
-          </a>
-          <a href="#">
-            <img src={Home} />
-          </a>
+            <img alt="speakout" src={Instagram} />
+            <img alt="speakout" src={Facebook} />
+            <img alt="speakout" src={Twitter} />
+            <img alt="speakout" src={Home} />
         </div>
         <div className="address">
-          <img src={Pin} />
+          <img alt="speakout" src={Pin} />
           <p>Rd No 3949, Bani Jamra, Bahrain</p>
         </div>
         <div className="email">
-          <img src={Email} />
+          <img alt="speakout" src={Email} />
           <p>speakout.infobh@gmail.com</p>
         </div>
       </div>

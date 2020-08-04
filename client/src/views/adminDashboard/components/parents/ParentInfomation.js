@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, {  useEffect } from 'react'
 import { connect } from 'react-redux';
 import { getParentById, toggleEditParent } from '../../../../actions';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter} from 'react-router-dom';
 import ParentForm from './ParentForm'
-import { Grid, Segment, Form, Icon } from 'semantic-ui-react'
+import { Grid, Segment, Icon } from 'semantic-ui-react'
 
 const ParentInfomation = props => {
     useEffect(() => {
         props.getParentById(props.parentId)
-    }, [])
+    }, [props])
 
     const editParentInfo = e => {
         e.preventDefault();

@@ -15,7 +15,7 @@ export const LOGOUT_FAILURE = 'LOGOUT_FAILURE';
 
 export const loggedIn = (history) => {
   return dispatch => {
-    dispatch({ type: LOGGEDIN_START });
+    // dispatch({ type: LOGGEDIN_START });
     
     axios 
       .get('https://speak-out-be-staging.herokuapp.com/user')

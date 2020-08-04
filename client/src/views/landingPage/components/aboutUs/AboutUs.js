@@ -9,8 +9,7 @@ import Garden from "../../../../assets/Garden.png";
 function AboutUs(props) {
   useEffect(() => {
     props.toggle()
-    console.log('ABOUT US', props)
-  }, [])
+  }, [props])
 
   return (
     <div className="about-us">
@@ -30,7 +29,7 @@ function AboutUs(props) {
             people's wants and needs. Our students will have a measurable
             output, both in the center and at school or work.
           </p>
-          <img src={Garden} />
+          <img alt="speakout" src={Garden} />
         </div>
         <div className="body-right">
           <h2>About Us</h2>

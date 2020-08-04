@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Header from './header/Header';
 import Special from './special/Special';
 import Affordability from './affordability/Affordability';
@@ -12,7 +12,7 @@ import { toggle } from "../../../../actions/landingPageActions/landingPageAction
 function LandingPage(props) {
 useEffect(() => {
   props.toggle();
-}, [])
+}, [props])
   return (
     <div>
       <Header />

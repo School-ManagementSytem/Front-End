@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getStaffById, toggleEditComponent } from '../../../../../actions';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import StaffInformationTab from './StaffInformationTab';
 import StaffCoursesTab from './StaffCoursesTab';
 
@@ -13,7 +13,7 @@ import '../../mainStyle/mainCard.scss';
 const StaffCard = props => {
     useEffect(() => {
         props.getStaffById(props.staffID)
-    }, [])
+    }, [props])
 
   const panes = [
         {

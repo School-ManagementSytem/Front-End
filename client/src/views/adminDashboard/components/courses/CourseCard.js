@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { getCourseById, toggleEditCourse } from '../../../../actions';
@@ -15,11 +15,9 @@ const CourseCard = props => {
 
     const { courseId } = props
 
-    useEffect(() => {
+    useEffect((courseId) => {
         props.getCourseById(courseId)
-    }, [])
-
-
+    }, [props])
 
     const panes = [
         {

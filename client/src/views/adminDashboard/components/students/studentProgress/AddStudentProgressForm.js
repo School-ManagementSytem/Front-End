@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux';
 import { Grid, Segment, Input, Icon} from 'semantic-ui-react';
 import { postStudentProgress, togglePostComponent } from '../../../../../actions';
-import { Table, Spin } from 'antd';
+import { Spin } from 'antd';
 
 
 
@@ -44,11 +44,6 @@ const formSubmit = e => {
     props.postStudentProgress(state)
 }
 
-// const overallAverage = arr => {
-//     arr = [state.speaking_fluency, state.speaking_accuracy, state.vocabulary, state.pronunciation, state.grammar, state.listening, state.writing, state.reading, state.interest, state.participation]
-//    arr.reduce(( a, b) => a + b, 0) / arr.length
- 
-// }
 
     return(
         <div className="gridView">

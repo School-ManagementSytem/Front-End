@@ -4,7 +4,7 @@ import CourseCard from './CourseCard.js';
 
 
 const Course = () => {
-  const [clickedTabs, setClickedTab] = useState([]);
+  const [setClickedTab] = useState([]);
   const [courseView, setCourseView] = useState('courseTableView');
   const [courseID, setCourseID] = useState('');
 

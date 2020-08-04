@@ -1,4 +1,4 @@
 [build]
-base = "/opt/build/repo/client"
-publish = "/opt/build/repo/client/build"
+base = "client/"
+publish = "build/"
 command = "yarn build"

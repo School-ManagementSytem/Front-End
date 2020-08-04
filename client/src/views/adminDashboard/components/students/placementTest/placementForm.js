@@ -1,7 +1,7 @@
-import React, {useState, useEffect } from 'react';
+import React, {useState } from 'react';
 import { connect } from 'react-redux';
 import { editPlacementTestById, toggleEditPlacement } from '../../../../../actions';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { Icon } from 'semantic-ui-react'
 import { Input, Row, Col} from 'antd';
 import './placementTest.scss';

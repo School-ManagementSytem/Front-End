@@ -7,7 +7,7 @@ import StaffDashboard from './staffDashboard/components/index';
 
 function Index(props) {
 
-  {if (props.user.username === 'admin') {
+  if (props.user.username === 'admin') {
       return (
         <AdminDashboard />
       )
@@ -22,7 +22,6 @@ function Index(props) {
     } else {
       return 
     }
-  } 
 }
 
 const mapStateToProps = state => {

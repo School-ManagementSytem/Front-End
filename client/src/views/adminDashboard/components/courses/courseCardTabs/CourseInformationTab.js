@@ -1,21 +1,15 @@
-import React, { useState, useEffect } from 'react'
-import { withRouter, Link } from 'react-router-dom';
+import React, { useEffect } from 'react'
+import { withRouter, } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getCourseById, toggleEditCourse } from '../../../../../actions';
 
-import { Grid, Segment, Form } from 'semantic-ui-react'
+import { Grid, Segment } from 'semantic-ui-react'
 
 const CourseInformationTab = props => {
 
   useEffect(() => {
     props.getCourseById(props.parentId)
-  }, [])
-
-  const editCourseInfo = e => {
-      e.preventDefault();
-      props.toggleEditCourse();
-  }
-
+  }, [props])
 
   return (
     <>

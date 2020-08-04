@@ -13,7 +13,7 @@ const StaffCoursesTab = props => {
     const {staffID, teacher} = props
     useEffect(() => {
         props.getStaffCourses(staffID)
-    }, [])
+    }, [props, staffID])
     
     const [modalVisible, setModalVisible] = useState({
         visible: false,

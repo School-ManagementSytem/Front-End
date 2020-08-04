@@ -11,14 +11,13 @@ import groupSong from '../../../../../assets/group-singsong.jpg';
 import cardGame from '../../../../../assets/kids-playing-card-match-game.jpg';
 import prevArrow from '../../../../../assets/prev-arrow.png';
 import nextArrow from '../../../../../assets/next-arrow.png';
-import gallery from '../../../../../assets/gallery-carousel-placeholder.png';
 
 // Assets
 
 function NextArrow(props) {
-    const { className, style, onClick } = props;
+    const { className, onClick } = props;
     return (
-        <img
+        <img alt="speakout"
             src={nextArrow}
             className={className}
             onClick={onClick}
@@ -27,9 +26,9 @@ function NextArrow(props) {
 }
 
 function PrevArrow(props) {
-    const { className, style, onClick } = props;
+    const { className, onClick } = props;
     return (
-        <img
+        <img alt="speakout"
             src={prevArrow}
             className={className}
             onClick={onClick}
@@ -55,19 +54,19 @@ function Carousel() {
                 <h2>Gallery</h2>
                 <Slider {...settings}>
                     <div>
-                        <img src={boysOutside} />
+                        <img alt="speakout" src={boysOutside} />
                     </div>
                     <div>
-                        <img src={girlDiorama} />
+                        <img alt="speakout" src={girlDiorama} />
                     </div>
                     <div>
-                        <img src={girlsLine} />
+                        <img alt="speakout" src={girlsLine} />
                     </div>
                     <div>
-                        <img src={groupSong} />
+                        <img alt="speakout" src={groupSong} />
                     </div>
                     <div>
-                        <img src={cardGame} />
+                        <img alt="speakout" src={cardGame} />
                     </div>
                 </Slider>
             </div>

@@ -1,17 +1,16 @@
-import React, {useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux';
 import { getPlacementTestById, toggleEditPlacement } from '../../../../../actions';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { Icon } from 'semantic-ui-react'
 import { Row, Col } from 'antd';
-import PlacementForm from './placementForm'
 import './placementTest.scss'
 
 const PlacementTest = props => {
     
     useEffect(() => {
         props.getPlacementTestById(props.studentID)
-    }, [])
+    }, [props])
 
 const editModal = e => {
       e.preventDefault();

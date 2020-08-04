@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Grid, Segment, Form, Icon } from 'semantic-ui-react'
+import { Grid, Segment, Icon } from 'semantic-ui-react'
 import { connect } from 'react-redux';
 import { getStudentById, toggleEditComponent, toggleEditPlacement } from '../../../../../actions';
 import { withRouter } from 'react-router-dom';
@@ -21,7 +21,7 @@ const StudentInformationTab = props => {
  
     useEffect(() => {
         props.getStudentById(props.studentID)
-    }, [])
+    }, [props])
 
     let options = { year: 'numeric', month: 'numeric', day: 'numeric' }; //'long'
     let birthdate = new Date(props.studentById.birthdate).toLocaleDateString('en-GB', options)

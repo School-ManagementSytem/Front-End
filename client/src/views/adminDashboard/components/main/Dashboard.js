@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import { adminDashboardTabs } from '../../../../data';
 import TabList from './TabList';
 import Display from './Display';

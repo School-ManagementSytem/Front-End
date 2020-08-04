@@ -10,7 +10,7 @@ function Primary(props) {
 
   useEffect(() => {
     props.toggle();
-  },[])
+  },[props])
   
   return (
     <div className="primary-info">
@@ -38,7 +38,7 @@ function Primary(props) {
             sounds or divergent sounds and help to highligh the strengths and
             rhythm of English.
           </p>
-          <img src={Victoria} />
+          <img alt="speakout" src={Victoria} />
         </div>
         <div className="body-right">
           <h2>General English for 6-12 years</h2>

@@ -100,7 +100,7 @@ export const getDropDown = () => dispatch => {
     dispatch({ type: FETCH_DROPDOWN_START})
     axios.all([locationTable, contactTable, gradeTable, blockTable])
     .then(axios.spread((...res) => {
-        let tablesThree = res.map((each, i) => {
+        res.map((each, i) => {
           if(i === 0) {
             dispatch({type: FETCH_DROPDOWN_SUCCESSTABLE1, payload:each.data.tableData})
           } 
@@ -113,6 +113,7 @@ export const getDropDown = () => dispatch => {
           if(i === 3){
             dispatch({type: FETCH_DROPDOWN_SUCCESSTABLE4, payload:each.data.tableData})
           }
+          return null
         })
      })).catch(err=> {
          console.log('err',err)

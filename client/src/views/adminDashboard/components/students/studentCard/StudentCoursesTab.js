@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { getStudentCourses } from '../../../../../actions';
 import { Table } from 'antd';
 
@@ -11,7 +11,7 @@ const StudentCoursesTab = props => {
 
   useEffect(() => {
     props.getStudentCourses(props.studentID)
-  }, [])
+  }, [props])
 
 //SHAPE OF DATA: DO NOT DELETE YET
   // course_schedule: "Sat / Tue"

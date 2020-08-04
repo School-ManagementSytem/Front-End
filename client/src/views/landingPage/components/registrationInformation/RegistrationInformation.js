@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { withRouter } from "react-router";
-import { Link } from "react-router-dom";
 import "./registrationInformation.scss";
 import { toggle } from "../../../../actions/landingPageActions/landingPageActions";
 import { connect } from 'react-redux';
@@ -8,7 +7,7 @@ import { connect } from 'react-redux';
 function RegistrationInformation(props) {
   useEffect(() => {
     props.toggle();
-  }, [toggle])
+  }, [props])
 
   return (
     <div className="registration-information">

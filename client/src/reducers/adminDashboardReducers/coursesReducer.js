@@ -31,7 +31,6 @@ import {
         isEdited: false,
         isEditing: false,
         isPosting: false,
-        isPosting: false,
         searchTerm: "",
   }
   
@@ -110,7 +109,6 @@ import {
                     isLoading: false,
                     error: null,
                     isPosting: false,
-                    isPosting: true,
                     staffById: action.payload
                 };
             case ADD_COURSE_FAILURE:

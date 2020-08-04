@@ -1,5 +1,3 @@
-import { from } from 'rxjs';
-
 export {
   logIn,
   LOGIN_START,
