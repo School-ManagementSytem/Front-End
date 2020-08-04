@@ -42,7 +42,7 @@ function RegistrationInformation(props) {
           <p>
             Cost includes registration, books, stationery, and three sessions.
           </p>
-          <Link to="/register" className="button">Register Now</Link>
+          {/* <Link to="/register" className="button">Register Now</Link> */}
         </div>
       </div>
     </div>

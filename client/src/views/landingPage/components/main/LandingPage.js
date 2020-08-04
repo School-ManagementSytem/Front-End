@@ -14,14 +14,14 @@ useEffect(() => {
   props.toggle();
 }, [])
   return (
-    <>
+    <div>
       <Header />
       <Special />
       <Affordability />
       <AgeGroups />
       <Carousel />
       <RegistrationInformation />
-    </>
+    </div>
   )
 }
 

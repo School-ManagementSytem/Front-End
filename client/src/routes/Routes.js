@@ -1,45 +1,3 @@
-// import React, { useEffect } from "react";
-// import { Route, Switch } from "react-router-dom";
-// import { withRouter } from "react-router";
-// import { connect } from 'react-redux';
-// import { loggedIn } from '../actions/authenticationActions';
-// import Login from '../authentication/Login';
-// import LandingPage from '../views/index';
-// import DashboardView from '../views';
-
-// function Routes(props) {
-
-//   useEffect(() => {
-//     props.loggedIn(props.history);
-//   }, [])
-
-//   return (
-//     <div>
-//       <Switch>
-//       { props.state.authenticationReducer.user.authenticated && 
-//             <Route exact path='/dashboard' render={() => 
-//               <DashboardView />
-//              } /> 
-//           }
-//         <Route  path='/login' render={() => <Login />} />
-//         <Route exact path="/" render={() => <LandingPage />} />
-//       </Switch>
-//     </div>
-//   );
-// }
-
-// const mapStateToProps = state => {
-//   return {
-//     state: state
-//   };
-// };
-
-// export default withRouter(connect(
-//   mapStateToProps,
-//   { loggedIn }
-// )(Routes));
-
-
 import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import { withRouter } from "react-router";
@@ -59,12 +17,13 @@ import Kindergarten from '../views/landingPage/components/courseStructure/Kinder
 import Primary from '../views/landingPage/components/courseStructure/Primary';
 import MiddleAndSecondary from '../views/landingPage/components/courseStructure/MiddleAndSecondary';
 import Register from '../authentication/Register';
+
 function Routes(props) {
   useEffect(() => {
     props.loggedIn(props.history, props.location);
   }, [])
   return (
-    <div>
+    <div style={{marginTop: "100px"}}>
       {props.location.pathname !== '/dashboard' && <LandingHeader /> }
       <Switch>
         {props.state.authenticationReducer.user.authenticated && 

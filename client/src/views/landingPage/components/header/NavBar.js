@@ -77,7 +77,7 @@ function NavBar(props) {
         <Link to='/registration-information' onClick={handleRegistration} style={{borderBottom: `${selected === 'registration' && selected !== 'signin' ? '2px solid #C73642' : '2px solid transparent'}`}}>Registration Information</Link>
         <Link to='/about-us' onClick={handleAbout} style={{borderBottom: `${selected === 'about' && selected !== 'signin' ? '2px solid #C73642' : '2px solid transparent'}`}}>About Us</Link>
         <Link to='/contact-us' onClick={handleContact} style={{borderBottom: `${selected === 'contact' && selected !== 'signin' ? '2px solid #C73642' : '2px solid transparent'}`}}>Contact Us</Link>
-        <Link to='/login' onClick={handleSignIn} className="button" >{signInText}</Link>
+        {/* <Link to='/login' onClick={handleSignIn} className="button" >{signInText}</Link> */}
         {/* <button onClick={signIn}>{signInText}</button> */}
       </div>
     </div>
