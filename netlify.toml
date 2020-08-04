@@ -2,4 +2,3 @@
 base = "/opt/build/repo/client"
 publish = "/opt/build/repo/client/build"
 command = "yarn build"
-commandOrigin = config
