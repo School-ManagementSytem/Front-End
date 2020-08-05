@@ -17,7 +17,7 @@ import '../../mainStyle/mainCard.scss'
 const StudentCard = props => {
     useEffect(() => {
         props.getStudentById(props.studentID)
-    }, [props])
+    }, [])
 
     const studentPanes = [
         {

@@ -21,7 +21,7 @@ import Register from '../authentication/Register';
 function Routes(props) {
   useEffect(() => {
     props.loggedIn(props.history, props.location);
-  }, [props])
+  }, [])
   return (
     <div style={{marginTop: "100px"}}>
       {props.location.pathname !== '/dashboard' && <LandingHeader /> }

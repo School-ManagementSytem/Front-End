@@ -11,7 +11,7 @@ function ParentList(props) {
 
   useEffect(() => {
     props.getParentTable();
-  }, [props])
+  }, [])
 
   const parentListColumns = [
     {

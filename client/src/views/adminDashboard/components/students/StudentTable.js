@@ -15,7 +15,7 @@ const StudentTable = props => {
 
   useEffect(() => {
     props.getStudentTable();
-  }, [props])
+  }, [])
 
 
   const handleCancelButtonOnForm = () => {

@@ -15,7 +15,7 @@ const StaffTable = props => {
   const [form, setForm] = useState(false);
     useEffect(() => {
         props.getStaffTable();
-    }, [props])
+    }, [])
 
     const handleCancelButtonOnForm = () => {
       setForm(false);

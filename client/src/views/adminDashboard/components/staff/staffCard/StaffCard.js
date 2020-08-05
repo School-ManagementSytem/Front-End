@@ -13,7 +13,7 @@ import '../../mainStyle/mainCard.scss';
 const StaffCard = props => {
     useEffect(() => {
         props.getStaffById(props.staffID)
-    }, [props])
+    }, [])
 
   const panes = [
         {

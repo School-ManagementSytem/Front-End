@@ -9,7 +9,7 @@ function CourseStructure(props) {
 
   useEffect(() => {
     props.toggle();
-  }, [props])
+  }, [])
 
   return (
     <>

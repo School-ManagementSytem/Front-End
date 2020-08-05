@@ -11,7 +11,7 @@ function MiddleSecondary(props) {
 
   useEffect(() => {
     props.toggle();
-  }, [props])
+  }, [])
 
   return (
     <div className="middle-secondary">

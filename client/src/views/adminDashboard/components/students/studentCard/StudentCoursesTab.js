@@ -11,7 +11,7 @@ const StudentCoursesTab = props => {
 
   useEffect(() => {
     props.getStudentCourses(props.studentID)
-  }, [props])
+  }, [])
 
 //SHAPE OF DATA: DO NOT DELETE YET
   // course_schedule: "Sat / Tue"

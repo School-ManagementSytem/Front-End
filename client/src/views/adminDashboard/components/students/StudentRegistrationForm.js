@@ -40,7 +40,7 @@ const StudentRegistrationForm = (props) => {
 
   useEffect(() => {
     props.getDropDown();
-  }, [props])
+  }, [])
 
 
 

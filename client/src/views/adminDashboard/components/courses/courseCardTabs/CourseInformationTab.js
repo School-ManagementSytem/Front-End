@@ -9,7 +9,7 @@ const CourseInformationTab = props => {
 
   useEffect(() => {
     props.getCourseById(props.parentId)
-  }, [props])
+  }, [])
 
   return (
     <>

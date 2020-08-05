@@ -9,7 +9,7 @@ import Garden from "../../../../assets/Garden.png";
 function AboutUs(props) {
   useEffect(() => {
     props.toggle()
-  }, [props])
+  }, [])
 
   return (
     <div className="about-us">

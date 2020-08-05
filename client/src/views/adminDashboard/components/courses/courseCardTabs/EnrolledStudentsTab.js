@@ -17,7 +17,7 @@ const EnrolledStudentsTab = props => {
 
   useEffect(() => {
     props.getStudentTableByCourseID(props.courseId);
-  }, [props])
+  }, [])
 
   const handleSearchInput = () => {
     

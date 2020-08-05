@@ -17,7 +17,7 @@ const CourseCard = props => {
 
     useEffect((courseId) => {
         props.getCourseById(courseId)
-    }, [props])
+    }, [])
 
     const panes = [
         {

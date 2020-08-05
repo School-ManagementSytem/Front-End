@@ -8,7 +8,7 @@ import { Grid, Segment, Icon } from 'semantic-ui-react'
 const ParentInfomation = props => {
     useEffect(() => {
         props.getParentById(props.parentId)
-    }, [props])
+    }, [])
 
     const editParentInfo = e => {
         e.preventDefault();

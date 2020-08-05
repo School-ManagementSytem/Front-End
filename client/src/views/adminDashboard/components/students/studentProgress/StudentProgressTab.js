@@ -13,7 +13,7 @@ const StudentProgressTab = props => {
     useEffect(() => {
         props.getStudentProgress(props.studentID)
 
-    }, [props])
+    }, [])
 
     const [edit, setEdit] = useState(false)
 

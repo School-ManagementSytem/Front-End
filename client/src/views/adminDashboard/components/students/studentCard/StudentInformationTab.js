@@ -21,7 +21,7 @@ const StudentInformationTab = props => {
  
     useEffect(() => {
         props.getStudentById(props.studentID)
-    }, [props])
+    }, [])
 
     let options = { year: 'numeric', month: 'numeric', day: 'numeric' }; //'long'
     let birthdate = new Date(props.studentById.birthdate).toLocaleDateString('en-GB', options)

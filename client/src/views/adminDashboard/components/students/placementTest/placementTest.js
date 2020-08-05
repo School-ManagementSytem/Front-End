@@ -10,7 +10,7 @@ const PlacementTest = props => {
     
     useEffect(() => {
         props.getPlacementTestById(props.studentID)
-    }, [props])
+    }, [])
 
 const editModal = e => {
       e.preventDefault();
