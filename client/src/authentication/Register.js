@@ -35,7 +35,7 @@ function Register(props) {
   
   useEffect(() => {
     props.toggle();
-  }, [])
+  }, [props])
 
   const [user, setUser] = useState({
     username: "",

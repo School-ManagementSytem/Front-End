@@ -10,7 +10,7 @@ function Kindergarten(props) {
 
   useEffect(() => {
     props.toggle();
-  }, [])
+  }, [props])
 
   return (
     <>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { withRouter } from "react-router";
 import { connect } from 'react-redux';
@@ -19,11 +19,10 @@ import MiddleAndSecondary from '../views/landingPage/components/courseStructure/
 import Register from '../authentication/Register';
 
 function Routes(props) {
-  useEffect(() => {
-    props.loggedIn(props.history, props.location);
-  }, [])
+
+  
   return (
-    <div style={{marginTop: "100px"}}>
+    <div>
       {props.location.pathname !== '/dashboard' && <LandingHeader /> }
       <Switch>
         {props.state.authenticationReducer.user.authenticated && 

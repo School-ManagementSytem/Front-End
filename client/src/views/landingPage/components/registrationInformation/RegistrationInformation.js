@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 function RegistrationInformation(props) {
   useEffect(() => {
     props.toggle();
-  }, [])
+  }, [props])
 
   return (
     <div className="registration-information">

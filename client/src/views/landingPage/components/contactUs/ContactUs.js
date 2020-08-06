@@ -16,7 +16,8 @@ function ContactUs(props) {
   useEffect(() => {
     props.toggle();
 
-  }, [])
+  }, [props])
+  
   return (
     <div className="about-us">
       <header>
